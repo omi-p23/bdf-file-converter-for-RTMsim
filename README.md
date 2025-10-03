@@ -1,7 +1,3 @@
-Understood. You want a README that is direct, technical, and free of any marketing-style language or embellishments. Here is a revised, "dry and academic" version.
-
----
-
 # Mesh to RTMsim BDF Converter
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
