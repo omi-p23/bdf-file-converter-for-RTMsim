@@ -7,12 +7,12 @@ A Python script for converting 3D mesh files into the Nastran Bulk Data File (`.
 
 ## Background
 
-Standard mesh conversion utilities often produce BDF files that are incompatible with the parsers found in specialized academic software like RTMsim. This script addresses several common points of failure by generating a file that adheres to a classic, highly-compatible BDF standard.
+Standard mesh conversion utilities often produce BDF files that are incompatible with the parsers found in specialized academic software like RTMsim. 
 
-The primary incompatibilities addressed are:
+The primary incompatibilities addressed in this script are:
 1.  **Node Coordinate Format:** The script generates node data using the fixed-width, small-field `GRID` card format, as opposed to the large-field `GRID*` format which is not always supported.
 2.  **Missing Property Definitions:** The BDF standard requires that all elements are associated with a property card. This script automatically generates the necessary placeholder `PSHELL` and `MAT1` cards to ensure the file is valid.
-3.  **Strict Columnar Formatting:** The script manually constructs each line of the BDF file to enforce the strict, column-based alignment required by the Nastran format, preventing parsing errors.
+3.  **Proper Formatting:** The script manually constructs each line of the BDF file to enforce the column-based alignment required by the Nastran format, preventing parsing errors.
 
 ## Functionality
 
@@ -52,4 +52,4 @@ python convert_to_rtmsim.py blade_profile.msh blade_profile.bdf
 
 ## License
 
-MIT License. See the LICENSE file for details.
+MIT License.
