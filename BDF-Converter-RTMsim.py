@@ -2,7 +2,7 @@ import meshio
 import numpy as np
 import sys
 
-# Step 1: Get input and output filenames from the command line
+# Get input and output filenames from the command line
 if len(sys.argv) != 3:
     print("\n" + "="*60)
     print("Mesh-to-RTMsim BDF Converter")
@@ -83,4 +83,5 @@ try:
 except Exception as e:
     print(f"\nFATAL ERROR: An unexpected error occurred while writing the BDF file.")
     print(f"Error details: {e}")
+
 
